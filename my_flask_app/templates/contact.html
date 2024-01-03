@@ -1,0 +1,33 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Contact Us</title>
+</head>
+<body class="contact-page">
+    {% include 'nav.html' %}
+    <div class="contact_container">
+
+        <h1>Contact Us</h1>
+
+        <div class="contact-details">
+            <p>
+                Thank you for your interest in our organization. You can reach us using the following contact details:
+            </p>
+            <div class="contact-info">
+                <p><strong>Address:</strong> KMIT, Hyderabad</p>
+                <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+                <p><strong>Email:</strong> info@example.com</p>
+            </div>
+            <p>
+                If you have any inquiries or would like to get in touch, please feel free to contact us using the provided information.
+            </p>
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Predictions</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="container">
+        <h1>Predictions</h1>
+        <!-- <p>Genotype: {{ genotype }}</p> -->
+        <p>Allele Sequence: {{ allele_sequence }}</p>
+
+        <div id="result">
+            {% if data %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phenotypic Trait</th>
+                            <th>Pooled Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            {% for trait, prediction in data.items() %}
+                                <tr>
+                                    <td>
+                                        {% if trait == 'DH_Pooled' %}
+                                            Days to Heading ({{ trait }})
+                                        {% elif trait == 'GFD_Pooled' %}
+                                            Grain Filling Duration ({{ trait }})
+                                        {% elif trait == 'GNPS_Pooled' %}
+                                            Grain number per spike ({{ trait }})
+                                        {% elif trait == 'GWPS_Pooled' %}
+                                            Grain weight per spike ({{ trait }})
+                                        {% elif trait == 'GY_Pooled' %}
+                                            Grain Yield ({{ trait }})
+                                        {% elif trait == 'PH_Pooled' %}
+                                            Plant Height ({{ trait }})
+                                        {% else %}
+                                            {{ trait }}
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ prediction }}</td>
+                                </tr>
+                            {% endfor %}
+                        
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No predictions available.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

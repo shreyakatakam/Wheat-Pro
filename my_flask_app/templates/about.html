@@ -1,0 +1,26 @@
+<!-- about.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>About Us</title>
+</head>
+<body class="about-page">
+    {% include 'nav.html' %}
+    <div class="about_container">
+        <h1>About Us</h1>
+        <p>
+            Welcome to PhenoPredict, your hub for phenotypic trait predictions! 
+            We're on a mission to simplify genetics, making it accessible and understandable for everyone.
+        </p>
+        <p>
+            Explore the power of genetics with PhenoPredict. Whether you're a researcher, student, or just curious, 
+            we're here to help you predict and understand your genetic data.
+        </p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
