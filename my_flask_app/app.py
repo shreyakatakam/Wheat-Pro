@@ -103,6 +103,10 @@ def input_csv():
 
     return render_template('input.html', columns=columns, rows=rows)
 
+@app.route('/faqs')
+def faqs():
+    return render_template('faqs.html')
+
 @app.route('/output_csv')
 def output_csv():
     # Replace 'your_csv_file_path.csv' with the actual path to your CSV file
@@ -116,6 +120,7 @@ def output_csv():
     rows = df.values.tolist()
 
     return render_template('output.html', columns=columns, rows=rows)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

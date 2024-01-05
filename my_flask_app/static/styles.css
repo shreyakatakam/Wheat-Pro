@@ -60,12 +60,19 @@ th {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(94, 68, 68, 0.142);
     text-align: center;
-    position: absolute;
+    position:absolute;
     bottom: 0;
     right: 0;
     margin: 20px;
     padding: 20px;
     
+}
+#logo-contact {
+    max-width: 60px; /* Adjust the width as needed */
+    border-radius: 50%;
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
 }
 .about_container{
     max-width: 650px;
@@ -133,4 +140,38 @@ body.contact-page {
     background-image: url('https://burst.shopifycdn.com/photos/contact-us-image.jpg?width=1000&format=pjpg&exif=0&iptc=0');
     background-size: cover;
     background-repeat: no-repeat;
+}
+#logo {
+    max-width: 60px; /* Adjust the width as needed */
+    border-radius: 50%;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px; /* Add spacing between navigation links */
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.header {
+    top:0;
+    background-color: #835731;
+    color: #fff; /* Set text color to white */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer {
+    background-color: #333; /* Set the background color for the footer */
+    color: #fff; /* Set text color to white */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

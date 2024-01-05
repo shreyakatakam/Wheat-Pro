@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empowering Agriculture: Our innovative multi-trait prediction system for wheat plants utilizes advanced data analytics to forecast and optimize various traits crucial for crop yield and quality. Experience the future of precision farming with our cutting-edge technology, providing farmers with valuable insights for enhanced decision-making and sustainable agricultural practices.">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Phenotype Prediction</title>
 </head>
 <body>
-    {% include 'nav.html' %}
+    <div class="header">
+        <img src="{{ url_for('static', filename='logoq.jpeg') }}" alt="Logo" id="logo">
+        {% include 'nav.html' %}
+    </div>
     <video autoplay muted loop id="video-bg">
         <source src="{{ url_for('static', filename='video1.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
-    </video>   
+    </video>
     <div class="container">
         <h1>Phenotype Predictor</h1>
         <form id="prediction-form">
-
             <label for="allele_sequence">Allele Sequence:</label>
             <input type="text" id="allele_sequence" placeholder="Enter Allele Sequence" required>
             <button type="button" onclick="predict()">Predict</button>
-            
         </form>
-        <div id="result">
-                <p>Input  File: <a href="{{ url_for('input_csv') }}" target="_blank">input_csv</a></p>
-                <p>Output File: <a href="{{ url_for('output_csv') }}" target="_blank">output_csv</a></p>
-        </div>
+        <div id="result" style="color: black;">
+            <p><strong>Input File: </strong><a href="{{ url_for('input_csv') }}" target="_blank" style="color: black;">input_csv</a></p>
+            <p><strong>Output File: </strong><a href="{{ url_for('output_csv') }}" target="_blank" style="color: black;">output_csv</a></p>
+        </div>      
+    </div>
+    <div class="footer">
+        <p>All rights reserved &copy; 2023</p>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

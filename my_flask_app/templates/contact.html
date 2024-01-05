@@ -9,8 +9,9 @@
 </head>
 <body class="contact-page">
     {% include 'nav.html' %}
+    
     <div class="contact_container">
-
+        <img src="{{ url_for('static', filename='logoq.jpeg') }}" alt="Logo" id="logo-contact">
         <h1>Contact Us</h1>
 
         <div class="contact-details">
@@ -19,8 +20,7 @@
             </p>
             <div class="contact-info">
                 <p><strong>Address:</strong> KMIT, Hyderabad</p>
-                <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-                <p><strong>Email:</strong> info@example.com</p>
+                <p><strong>Email: </strong><a href="mailto:multitrait.prediction@gmail.com" style="color: black;">multitrait.prediction@gmail.com</a></p>
             </div>
             <p>
                 If you have any inquiries or would like to get in touch, please feel free to contact us using the provided information.

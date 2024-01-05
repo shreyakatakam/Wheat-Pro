@@ -27,22 +27,38 @@
                                 <tr>
                                     <td>
                                         {% if trait == 'DH_Pooled' %}
-                                            Days to Heading ({{ trait }})
+                                            Days to Heading (DH)
                                         {% elif trait == 'GFD_Pooled' %}
-                                            Grain Filling Duration ({{ trait }})
+                                            Grain Filling Duration (GFD)
                                         {% elif trait == 'GNPS_Pooled' %}
-                                            Grain number per spike ({{ trait }})
+                                            Grain number per spike (GNPS)
                                         {% elif trait == 'GWPS_Pooled' %}
-                                            Grain weight per spike ({{ trait }})
+                                            Grain weight per spike (GWPS)
                                         {% elif trait == 'GY_Pooled' %}
-                                            Grain Yield ({{ trait }})
+                                            Grain Yield (GY)
                                         {% elif trait == 'PH_Pooled' %}
-                                            Plant Height ({{ trait }})
+                                            Plant Height (PH)
                                         {% else %}
                                             {{ trait }}
                                         {% endif %}
                                     </td>
-                                    <td>{{ prediction }}</td>
+                                    <td>{{ prediction }} 
+                                        {% if trait == 'DH_Pooled' %}
+                                            days 
+                                        {% elif trait == 'GFD_Pooled' %}
+                                            days
+                                        {% elif trait == 'GNPS_Pooled' %}
+                                            number
+                                        {% elif trait == 'GWPS_Pooled' %}
+                                            gram
+                                        {% elif trait == 'GY_Pooled' %}
+                                            gram
+                                        {% elif trait == 'PH_Pooled' %}
+                                            cm
+                                        {% else %}
+                                            {{ trait }}
+                                        {% endif %}
+                                    </td>
                                 </tr>
                             {% endfor %}
                         
