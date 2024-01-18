@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Predictions</title>
+    <title >Predictions</title>
 </head>
 <body>
     {% include 'nav.html' %}
     <div class="container">
-        <h1>Predictions</h1>
+        <h1 style="font-family:'Times New Roman', Times, serif;">Predictions</h1>
         <!-- <p>Genotype: {{ genotype }}</p> -->
-        <p>Allele Sequence: {{ allele_sequence }}</p>
+        <b><p>Allele Sequence: </b>{{ allele_sequence }}</p>
 
         <div id="result">
             {% if data %}

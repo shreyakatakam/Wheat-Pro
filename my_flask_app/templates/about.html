@@ -1,26 +1,105 @@
-<!-- about.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>About Us</title>
+    <title>PhenoPredict - About Us</title>
 </head>
 <body class="about-page">
     {% include 'nav.html' %}
     <div class="about_container">
         <h1>About Us</h1>
-        <p>
-            Welcome to PhenoPredict, your hub for phenotypic trait predictions! 
-            We're on a mission to simplify genetics, making it accessible and understandable for everyone.
+        <p style="line-height: 1.5;">
+            We are currently involved in a project dedicated to analyzing and predicting essential phenotypic traits in wheat plants. <br>
+            The traits under scrutiny include Days to Heading (DH), Grain Filling Duration (GFD), Grain Number per Spike (GNPS), Grain Weight per Spike (GWPS), Plant Height (PH), and Grain Yield (GY). Our research spans multiple locations, focusing on variations observed in Dharwad, IARI-Delhi, IARI-Jharkhand, KARNAL, and Ludhiana.
+            
         </p>
         <p>
-            Explore the power of genetics with PhenoPredict. Whether you're a researcher, student, or just curious, 
-            we're here to help you predict and understand your genetic data.
+            The project aims to provide valuable insights into the growth, development, and productivity of wheat plants by studying the 
+            pooled values of these traits across different locations.
         </p>
+
+        <!-- Include Phenotypic Traits Content Here -->
+        <div class="trait-section">
+            <h2>Discover Key Phenotypic Traits:</h2>
+
+            <div class="trait">
+                <h3>Days to Heading (DH)</h3>
+                <p>
+                    Days to Heading (DH) is the duration, usually measured in days, for a plant to transition from the vegetative to the reproductive phase, marked by the emergence of its first seed head or flowering structure.
+                    <button class="more-info-btn" onclick="toggleInfo('dh')">ℹ</button>
+                </p>
+                <div id="dh-info" class="more-info">
+                    <p><strong>Significance:</strong> A crucial indicator in crop management, DH influences planting schedules and helps optimize crop cycles for maximum yield.</p>
+                </div>
+            </div>
+
+            <div class="trait">
+                <h3>Grain Filling Duration (GFD)</h3>
+                <p>
+                    GFD, or Grain Filling Duration, represents the duration it takes for grains to develop and fill on a plant. It is a crucial metric that measures the time from grain initiation to maturity, providing valuable insights into the reproductive growth phase of the plant.
+                    <button class="more-info-btn" onclick="toggleInfo('gfd')">ℹ</button>
+                </p>
+                <div id="gfd-info" class="more-info">
+                    <p><strong>Significance:</strong> Understanding GFD is vital for predicting the maturation period of crops, aiding farmers in optimizing harvest times for optimal grain quality.</p>
+                </div>
+            </div>
+
+            <div class="trait">
+                <h3>Grain Number per Spike (GNPS)</h3>
+                <p>
+                    GNPS, which stands for Grain Number per Spike, quantifies the number of grains on a single seed head or spike. This metric provides a key indicator of the reproductive potential of the plant, influencing overall grain yield.
+                    <button class="more-info-btn" onclick="toggleInfo('gnps')">ℹ</button>
+                </p>
+                <div id="gnps-info" class="more-info">
+                    <p><strong>Significance:</strong> An essential factor in determining yield potential, GNPS influences overall grain production and is crucial for crop breeders and farmers alike.</p>
+                </div>
+            </div>
+
+            <div class="trait">
+                <h3>Grain Weight per Spike (GWPS)</h3>
+                <p>
+                    GWPS, or Grain Weight per Spike, measures the weight of grains on a single spike. It is crucial for assessing overall yield potential, directly reflecting individual grain weight and contributing to total grain yield calculations.
+                    <button class="more-info-btn" onclick="toggleInfo('gwps')">ℹ</button>
+                </p>
+                <div id="gwps-info" class="more-info">
+                    <p><strong>Significance:</strong> This trait directly impacts the overall weight and quality of the harvest, providing insights into the efficiency of nutrient utilization and potential crop yield.</p>
+                </div>
+            </div>
+
+            <div class="trait">
+                <h3>Grain Yield (GY)</h3>
+                <p>
+                     GY, or Grain Yield, represents the total amount of harvested grains per unit area. 
+                     It serves as a key metric in evaluating the productivity and efficiency of a crop, providing 
+                     valuable insights into the overall yield potential of a given agricultural area.
+                    <button class="more-info-btn" onclick="toggleInfo('gy')">ℹ</button>
+                </p>
+                <div id="gy-info" class="more-info">
+                    <p><strong>Significance:</strong> A key metric for farmers and researchers, GY reflects the overall success of crop management practices, genetics, and environmental conditions.</p>
+                </div>
+            </div>
+
+            <div class="trait">
+                <h3>Plant Height (PH)</h3>
+                <p>
+                    PH, or Plant Height, is a measurement that indicates the vertical distance from the base of the plant to its tip. This trait is crucial in assessing the growth and structural development of the plant throughout its life cycle.
+                    <button class="more-info-btn" onclick="toggleInfo('ph')">ℹ</button>
+                </p>
+                <div id="ph-info" class="more-info">
+                    <p><strong>Significance:</strong> PH is a fundamental trait influencing crop lodging, resource utilization, and overall field management. Understanding PH aids in optimizing planting density and resource allocation.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        function toggleInfo(trait) {
+            var info = document.getElementById(trait + "-info");
+            info.style.display = info.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>

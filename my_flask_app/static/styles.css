@@ -74,21 +74,41 @@ th {
     top: 20px; /* Adjust the top position as needed */
     left: 20px; /* Adjust the left position as needed */
 }
-.about_container{
-    max-width: 650px;
-    height: 260px;
-    margin: 250px auto;
-    font-size:18px;
-    background-color:rgba(245, 241, 241, 0.729);
+.about_container {
+    max-width: 900px;
+    margin: 150px auto;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(245, 241, 241, 0.729);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(94, 68, 68, 0.142);
     text-align: center;
-    position: absolute;
-    top:50px;
-    left:0;
-    margin:20px;
-    padding:20px;
+    color: #322c2c; /* Dark gray text color */
+}
+
+
+
+.more-info-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 10px;
+}
+
+.more-info {
+    display: none;
+    margin-top: 10px;
 }
 
 h1 {
